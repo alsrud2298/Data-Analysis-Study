@@ -1,0 +1,169 @@
+# 2-1 숫자형
+a = 123 # 정수형(Integer)
+a = 1.2 # 실수형 (Floating-point)
+a = 4.24E10 # 실수형의 소수점 표현 방식
+a = 0o177 # 8진수 0o
+a = 0x8ff # 16진수 0x
+
+# 사칙연산
+a = 3
+b = 4
+print(a+b)
+print(a/b) 
+print(a**b) # 제곱
+print(a%b) # 나머지 반환
+print(a//b) # 몫 반환
+
+# 2-2 문자열 자료형
+# 문자열 만드는 법
+print("Hello World")
+print('Python is fun')
+print("""Life is too short, You need python""")
+print('''Life is too short, You need python''')
+
+# 문자열 내부에 따옴표 포함시키기
+print('"Python is very easy." he says.')
+print('Python\'s favorite food is perl')
+
+# 여러줄의 문자열 변수에 대입하기
+multiline = "Life is too short\nYou need python" #이스케이프 코드
+print(multiline)
+multiline2 = '''
+Life is too short
+You need python
+'''
+print(multiline2)
+
+# 문자열 연산하기
+head = "Python"
+tail = " is fun!"
+print(head + tail)
+
+a = "python"
+print(a*2)
+# 프로그램 제목 표시에 활용 
+print("="*50)
+print("My Program")
+print("="*50)
+
+# 문자열 길이 구하기
+a = "Life is too short"
+print(len(a))
+
+# 문자열 인덱싱과 슬라이싱
+# 파이썬 = 제로 인덱스
+a = "Life is too short, You need Python"
+print(a[3])
+print(a[-1]) # 뒤에서부터 접근
+print(a[0])
+print(a[-0])
+
+# 슬라이싱
+print(a[0:4]) # 끝 번호에 해당하는 것은 포함하지 않음.
+print(a[:17])
+print(a[:])
+print(a[19:-7])
+
+a = "20010331Rainy"
+year = a[:4]
+day = a[4:8]
+weather = a[8:]
+print(year,day,weather)
+
+# 문자열의 요소값은 변경 불가능함 (immutable 자료형)
+a = "Pithon"
+print(a[:1]+"y"+a[2:])
+
+# 문자열 포매팅
+# 1. 숫자 바로 대입
+print("I eat %d apples."%3)
+# 2. 문자열 바로 대입
+print("I eat %s apples."%"five")
+# 3. 숫자 값을 나타내는 변수로 대입
+number = 3
+print("I eat %d apples"%number)
+# 4. 2개 이상의 값 넣기
+number = 10
+day = "three"
+print("I ate %d apples. so I was sick for %s days"%(number, day))
+# 포맷코드 %s는 어떤 형태의 값이든 변환 가능 !
+
+# 포맷코드와 숫자 함께 사용
+# 1. 정렬과 공백
+print("%10s"%'hi') # 오른쪽 정렬
+print("%-10sjain."%'hi') # 왼쪽 정렬
+# 2. 소수점 표현하기
+print("%10.4f"%3.42134234)
+
+# format함수를 사용한 포매팅
+print("I ate {0} apples. so I was sick for {1} days".format(number,day))
+print("I ate {number} apples. so I was sick for {day} days".format(number=3,day=2))
+print("I ate {0} apples. so I was sick for {day} days".format(10,day=3))
+
+# 정렬
+print("{0:<10}".format("hi")) # 왼쪽정렬 :<
+print("{0:>10}".format("hi")) # 오른쪽정렬 :>
+print("{0:^10}".format("hi")) # 가운데정렬 :^
+
+# 공백 채우기
+print("{0:=^10}".format("hi"))
+
+# 소수점 표현하기
+y = 3.412435
+print("{0:0.4f}".format(y))
+
+# 중괄호 표현하기
+print("{{ and }} ".format())
+
+# f 문자열 포매팅 ( 파이썬 3.6부터 사용 가능)
+name = '홍길동'
+age = 30
+print(f'나의 이름은 {name}입니다. 나이는 {age}입니다.')
+print(f'나는 내년이면 {age+1}살이 된다.')
+
+d = {'name':'마민경','age':23}
+print(f'나의 이름은 {d["name"]}입니다. 나이는 {d["age"]}입니다.')
+
+# 정렬, 공백채우기, 소수점 표현
+print(f'{"hi":<10}')
+print(f'{"hi":!^10}')
+print(f'{y:0.4f}')
+print(f'{{and}}')
+
+# 문자열 내장 함수
+# 문자 개수 세기 count
+a = "hobby"
+print(a.count('b'))
+# 위치 알려주기1 (find) : 해당 문자열이 처음으로 나온 위치 반환 & 존재하지 않는 경우 -1 반환
+a = "Python is the best choice"
+a.find('b')
+a.find('k')
+# 위치 알려주기2 (index) : 해당 문자열이처음으로 나온 위치 반환 & 존재하지 않는 경우 오류 발생
+a.index('t')
+#a.index('k')
+# 문자열 삽입 join
+print(",".join("abcd"))
+# 소문자 -> 대문자 upper
+a = "hi"
+print(a.upper())
+# 대문자 -> 소문자 lower
+a = "HI"
+print(a.lower())
+# 오른쪽 공백 지우기 rstrip
+a = "  hi"
+print(a.rstrip())
+# 양쪽 공백 지우기 strip
+a = "  hi     "
+print(a.strip())
+# 문자열 바꾸기 replace
+a = "Life is too short"
+print(a.replace("Life","Your leg"))
+# 문자열 나누기 split
+print(a.split())
+b = "a:b:c:d"
+print(b.split(':'))
+
+
+
+
+
