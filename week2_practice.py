@@ -177,7 +177,7 @@ for i in range(1,num+1):
 # 4.
 num = int(input()) 
 for i in range(1,num+1):
-    print(" "*(n-i) + "*"*i)
+    print(" "*(num-i) + "*"*i)
 
 # 5.
 cnt = 0
