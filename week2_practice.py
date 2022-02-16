@@ -192,3 +192,4 @@ while True:
         break
     num = temp
 print(cnt)
+# 문자열로 풀어보기
