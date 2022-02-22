@@ -85,7 +85,7 @@ else:
     print("grade is E") 
 
 # 3.
-# phone = input("휴대전화 번호 입력 : ")
+phone = input("휴대전화 번호 입력 : ")
 if phone[:3] == "011":
     print("당신은 SKT 사용자입니다.")
 elif phone[:3] == "016":
@@ -182,14 +182,14 @@ for i in range(1,num+1):
 # 5.
 cnt = 0
 num = int(input("숫자를 입력하세요 : "))
+temp = num
 while True:
     cnt += 1
-    if num < 10:
-        temp = num*10 + num
-    else:
-        temp = ( num%10 * 10 )  + num//10 + num%10
+    first = temp % 10
+    second = temp // 10
+    three = (first + second) % 10
+    temp = (first * 10) + three
     if temp == num:
         break
-    num = temp
+    
 print(cnt)
-# 문자열로 풀어보기
