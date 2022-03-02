@@ -18,7 +18,7 @@ print(result)
 
 # 게시판 페이징하기
 # 게시물의 총 건수와 한 페이지에 보여 줄 게시물의 수를 입력했을 때 총 페이지수를 출력하는 프로그램
-total = 0
+
 def getTotalPage(m,n): # m : 게시물의 총 건수 , n : 한 페이지에 보여줄 게시물 수
     if m % n == 0:
         return m // n
