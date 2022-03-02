@@ -141,7 +141,6 @@ park.deposit(5000)
 park.deposit(5000)
 park.deposit(5000)
 print(park.balance)
-
 for i in list:
     if i.balance >= 1000000:
         i.display_info()
